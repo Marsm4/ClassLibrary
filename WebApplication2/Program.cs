@@ -1,19 +1,38 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using ClassLibrary;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+var builder = WebApplication.CreateBuilder(args);
 
-namespace WebApplication2
+// Добавляем сервисы для контроллеров
+builder.Services.AddControllers();
+
+// Добавляем Swagger
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Настройка подключения к базе данных
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Добавляем сервисы
+builder.Services.AddScoped<IVrachService, VrachService>();
+
+
+var app = builder.Build();
+
+// Включаем Swagger при разработке
+if (app.Environment.IsDevelopment())
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
-
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
-    }
+    app.UseSwagger();
+    app.UseSwaggerUI(); // Это включает интерфейс Swagger UI
 }
+
+app.UseHttpsRedirection();
+
+app.UseRouting();
+
+app.UseAuthorization();
+
+app.MapControllers();
+
+app.Run();

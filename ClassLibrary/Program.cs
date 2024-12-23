@@ -23,7 +23,7 @@ namespace ClassLibrary
             var coreApp = container.Resolve<CoreApplication>();
 
 
-            Console.WriteLine("Студент добавлен!");
+            Console.WriteLine("Врач добавлен!");
         }
     }
 }

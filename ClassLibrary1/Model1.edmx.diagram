@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fb507b84a7814881891142f0709622a5" Name="Diagram1" ZoomLevel="40">
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Diagnoz" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Doljnost" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Gender" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Grupa_krovi" Width="1.5" PointX="3" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Lekarstvo" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Med_card" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Palata" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Plan_lecheniya" Width="1.5" PointX="12" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Plan_postavki" Width="1.5" PointX="12" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Postavshik" Width="1.5" PointX="9.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Postyplenie" Width="1.5" PointX="7.5" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Prichina_vypiski" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Type_postupleniya" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Vipiska" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.Vrach" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.vw_DoctorPatients" Width="1.5" PointX="9.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.vw_MedicineSuppliers" Width="1.5" PointX="11.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.vw_PalataStatus" Width="1.5" PointX="11.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.vw_PatientDiagnosis" Width="1.5" PointX="9.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="Clinical_Hospital_33Model.vw_PatientDischarges" Width="1.5" PointX="11.75" PointY="13" IsExpanded="true" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Bolnoy_Diagnoz" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Recept_Diagnoz" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Vrach_Doljnost" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Med_card_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Palata_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Vrach_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Med_card_Grupa_krovi" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Plan_postavki_Lekarstvo" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Recept_Lekarstvo" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Bolnoy_Vrach" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Med_card_Palata" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Postyplenie_Med_card" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Vipiska_Med_card" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Plan_postavki_Postavshik" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Postyplenie_Type_postupleniya" ManuallyRouted="false" />
+        <AssociationConnector Association="Clinical_Hospital_33Model.FK_Vipiska_Prichina_vypiski" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

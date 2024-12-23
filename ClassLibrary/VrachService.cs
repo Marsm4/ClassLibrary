@@ -15,34 +15,34 @@ namespace ClassLibrary
             _context = context;
         }
 
-        public IEnumerable<Vrachs> GetAll()
+        public IEnumerable<Vrach> GetAll()
         {
             return _context.Vrachs.ToList();
         }
 
-        public Vrachs GetById(int id)
+        public Vrach GetById(int id)
         {
             return _context.Vrachs.FirstOrDefault(e => e.Id_vracha == id);
         }
 
-        public void Add(Vrachs ekzamens)
+        public void Add(Vrach vrach)
         {
-            _context.Vrachs.Add(ekzamens);
+            _context.Vrachs.Add(vrach);
             _context.SaveChanges();
         }
 
-        public void Update(Vrachs ekzamens)
+        public void Update(Vrach vrachs)
         {
-            _context.Entry(ekzamens).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.Entry(vrachs).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
             _context.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var ekzamens = GetById(id);
-            if (ekzamens != null)
+            var vrachs = GetById(id);
+            if (vrachs != null)
             {
-                _context.Vrachs.Remove(ekzamens);
+                _context.Vrachs.Remove(vrachs);
                 _context.SaveChanges();
             }
         }
