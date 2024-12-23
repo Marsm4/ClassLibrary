@@ -5,32 +5,21 @@ using Clinical_Hospital_33.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Добавляем контекст базы данных
+// Добавьте контекст базы данных
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Добавляем репозитории и сервисы
-builder.Services.AddScoped<IVrachRepository, VrachRepository>();
-builder.Services.AddScoped<IVrachService, VrachService>();
+// Добавьте репозитории и сервисы
+builder.Services.AddScoped<IVrachRepository, VrachRepository>(); // Регистрация репозитория
+builder.Services.AddScoped<IVrachService, VrachService>(); // Регистрация сервиса
 
-// Добавляем контроллеры
+// Добавьте контроллеры
 builder.Services.AddControllers();
-
-// Добавляем Swagger
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Включаем Swagger и Swagger UI
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+// Настройте конвейер запросов
 app.UseRouting();
-
 app.MapControllers();
 
 app.Run();

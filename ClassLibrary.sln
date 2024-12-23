@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp\WpfApp.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication3", "WebApplication3\WebApplication3.csproj", "{BBC1D93A-681B-4542-BFA5-258A1B523F36}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2B754991-E3F4-4432-8408-4DCC653E3007}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication4", "WebApplication4\WebApplication4.csproj", "{F5BCDD3D-376E-4ADE-B4A7-3E2F4610B17E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +40,10 @@ Global
 		{BBC1D93A-681B-4542-BFA5-258A1B523F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBC1D93A-681B-4542-BFA5-258A1B523F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBC1D93A-681B-4542-BFA5-258A1B523F36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5BCDD3D-376E-4ADE-B4A7-3E2F4610B17E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5BCDD3D-376E-4ADE-B4A7-3E2F4610B17E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5BCDD3D-376E-4ADE-B4A7-3E2F4610B17E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5BCDD3D-376E-4ADE-B4A7-3E2F4610B17E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
